@@ -15,6 +15,5 @@ const ClearCompletedButton = props => {
         <button>Clear Completed</button>
     )
 }
-// export default ClearCompletedButton
 
 export { AddTaskButton, ClearCompletedButton}

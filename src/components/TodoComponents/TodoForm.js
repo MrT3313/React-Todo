@@ -1,21 +1,9 @@
 import React from 'react';
-import '../TodoComponents/Todo.css';
+
 
 // import buttons
 import { AddTaskButton, ClearCompletedButton} from './buttons'
 
-
-// EXAMPLE: Function Component
-// const form = props => {
-
-//     return (
-//         <>
-//             render this text
-//         </>
-//     )
-// }
-
-// EXAMPLE: Class Component 
 class Form extends React.Component {
     constructor () {
         super();
@@ -30,5 +18,4 @@ class Form extends React.Component {
         )
     }
 }
-
 export default Form
