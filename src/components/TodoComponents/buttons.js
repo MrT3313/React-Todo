@@ -2,9 +2,17 @@ import React from 'react'
 
 // -make FUNCTIONAL COMPONENT --> it only needs static text values
 
-const addTaskButton = props => {
-    
+// -1- //
+const AddTaskButton = props => {
     return (
-        // <button>    </button>
+        <button>Add Todo</button>
+    )
+}
+export default AddTaskButton
+
+// -2- //
+const ClearCompletedButton = props => {
+    return (
+        <button>Clear Completed</button>
     )
 }

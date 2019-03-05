@@ -1,6 +1,9 @@
 import React from 'react';
 import '../TodoComponents/Todo.css';
 
+// import button
+import AddTaskButton from './buttons'
+import ClearCompletedButton from './buttons'
 
 // EXAMPLE: Function Component
 // const form = props => {
@@ -19,7 +22,11 @@ class Form extends React.Component {
     }
     render() {
         return (
-            <input type="text" name="formName"></input>
+            <div>
+                <input type="text" name="formName"></input>
+                <AddTaskButton />
+                <ClearCompletedButton />
+            </div>
         )
     }
 }
