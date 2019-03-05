@@ -1,9 +1,9 @@
 import React from 'react';
 import '../TodoComponents/Todo.css';
 
-// import button
-import AddTaskButton from './buttons'
-import ClearCompletedButton from './buttons'
+// import buttons
+import { AddTaskButton, ClearCompletedButton} from './buttons'
+
 
 // EXAMPLE: Function Component
 // const form = props => {
@@ -22,7 +22,7 @@ class Form extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className='toDoForm'>
                 <input type="text" name="formName"></input>
                 <AddTaskButton />
                 <ClearCompletedButton />

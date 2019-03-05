@@ -8,7 +8,6 @@ const AddTaskButton = props => {
         <button>Add Todo</button>
     )
 }
-export default AddTaskButton
 
 // -2- //
 const ClearCompletedButton = props => {
@@ -16,3 +15,6 @@ const ClearCompletedButton = props => {
         <button>Clear Completed</button>
     )
 }
+// export default ClearCompletedButton
+
+export { AddTaskButton, ClearCompletedButton}
