@@ -15,30 +15,39 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
+      toDoDataArray: [
+        'first item in array',
+        'second item yo',
+        'third item placeholder',
+        'yo this be the forth'
+      ],
       task: '',
       id: undefined,
       completed: false
     }
   }
+
+
+  addButtonHandler() {
+
+  }
+
   render() {
     return (
       <div className='container-app'>
         {/* pass STATE as PROPS into ToDoList  */}
-          <ToDoList />
+          <ToDoList myProps={this.state}/>
         {/* displayForm */}
           <Form />
       </div>
     );
   }
 
+
   // ADD HANDLERs for BOTH buttons INSIDE the <App />
-
-
-
-
 
 }
 export default App;
-// -- -- -- // 
+ 
 
 

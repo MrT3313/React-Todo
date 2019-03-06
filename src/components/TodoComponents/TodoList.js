@@ -4,26 +4,25 @@
 import React from 'react'
 import './Todo.css'
 
-// import dataArray from ToDo.js
 
-class ToDoList extends React.Component {
-    constructor() {
-        super()
 
-        this.state = {
-            toDoArray:[] // is the display that is changing       
-        }
-    }
+// functional component
 
-    render () {
-        return (
-            <div className='toDoList'>
-                <ul>
-                    {/* Dynamic Fill */}
-                </ul>
-            </div>
-        )
-    }
+function ToDoList (props) {
+        const { myProps } = props;
+        console.log(myProps)
+        console.log(myProps.toDoDataArray[0])
+        console.log(myProps.toDoDataArray[1])
+        console.log(myProps.toDoDataArray[2])
+        console.log(myProps.toDoDataArray[3])
+    return (
+        <div className='toDoList'>
+            <p>{myProps.toDoDataArray[0]}</p>
+            <p>{myProps.toDoDataArray[1]}</p>
+            <p>{myProps.toDoDataArray[2]}</p>
+            <p>{myProps.toDoDataArray[3]}</p>
+        </div>
+    )
 }
 
 export default ToDoList
