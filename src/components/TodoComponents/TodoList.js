@@ -4,24 +4,30 @@
 import React from 'react'
 import './Todo.css'
 
-
+import Todo from './Todo'
 
 // functional component
 
 function ToDoList (props) {
         const { myProps } = props;
         console.log(myProps)
-        console.log(myProps.toDoDataArray[0])
-        console.log(myProps.toDoDataArray[1])
-        console.log(myProps.toDoDataArray[2])
-        console.log(myProps.toDoDataArray[3])
+        // SET VARIABLES
+        const propsArray = myProps.toDoDataArray
+        console.log(propsArray)
+        const propsLength = myProps.toDoDataArray.length
+        console.log(propsLength)
+        // -- //
+
+        {/* toDoDataArray Length */}
+        let arrayLength = myProps.toDoDataArray.length
+
     return (
         <div className='toDoList'>
-            <p>{myProps.toDoDataArray[0]}</p>
-            <p>{myProps.toDoDataArray[1]}</p>
-            <p>{myProps.toDoDataArray[2]}</p>
-            <p>{myProps.toDoDataArray[3]}</p>
+            {myProps.toDoDataArray.map(item => (
+                <Todo props={propsArray}/>    
+            ))}
         </div>
+
     )
 }
 

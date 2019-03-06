@@ -31,6 +31,9 @@ class App extends React.Component {
   addButtonHandler() {
 
   }
+  clearButtonHandler() {
+
+  }
 
   render() {
     return (
