@@ -4,6 +4,10 @@
     border: 2px dashed slategray;
 }
 
+.toDoForm {
+    margin: 10px;
+}
+
 .toDoList {
     height: 100px;
     border: 1px solid black;

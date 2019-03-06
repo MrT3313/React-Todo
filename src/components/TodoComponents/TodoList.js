@@ -2,8 +2,7 @@
 // feel free to change this component.js into TodoList.js
 
 import React from 'react'
-import '../TodoComponents/Todo.css'
-
+import './Todo.css'
 class ToDoList extends React.Component {
     constructor() {
         super()
@@ -15,10 +14,13 @@ class ToDoList extends React.Component {
     render () {
         return (
             <div className='toDoList'>
-                <p>1</p>
-                <p>2</p>
+                <ul>
+                    {/* Dynamic Fill */}
+                </ul>
             </div>
         )
     }
 }
+
 export default ToDoList
+

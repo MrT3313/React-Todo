@@ -1,9 +1,5 @@
 import React from 'react';
 
-
-// import buttons
-import { AddTaskButton, ClearCompletedButton} from './buttons'
-
 class Form extends React.Component {
     constructor () {
         super();
@@ -12,8 +8,8 @@ class Form extends React.Component {
         return (
             <div className='toDoForm'>
                 <input type="text" name="formName"></input>
-                <AddTaskButton />
-                <ClearCompletedButton />
+                <button>Add Todo</button>
+                <button>Clear Completed</button>
             </div>
         )
     }
