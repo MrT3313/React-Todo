@@ -3,14 +3,18 @@
 
 import React from 'react'
 import './Todo.css'
+
+// import dataArray from ToDo.js
+
 class ToDoList extends React.Component {
     constructor() {
         super()
 
         this.state = {
-            
+            toDoArray:[] // is the display that is changing       
         }
     }
+
     render () {
         return (
             <div className='toDoList'>

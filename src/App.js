@@ -1,15 +1,11 @@
 // import React
   import React from 'react';
   import './components/TodoComponents/Todo.css'
+  //--//
   import ToDoList from './components/TodoComponents/TodoList'
   import Form from './components/TodoComponents/TodoForm'
-  
-// -- -- -- // 
 
-// -- toDoArray -- //
-const toDoArray = []
-console.log(toDoArray)
-// -- -- -- // 
+// -- -- -- //  
 
 // -- CLASS COMPONENT -- //
 class App extends React.Component {
@@ -27,11 +23,20 @@ class App extends React.Component {
   render() {
     return (
       <div className='container-app'>
-        <ToDoList />
-        <Form />
+        {/* pass STATE as PROPS into ToDoList  */}
+          <ToDoList />
+        {/* displayForm */}
+          <Form />
       </div>
     );
   }
+
+  // ADD HANDLERs for BOTH buttons INSIDE the <App />
+
+
+
+
+
 }
 export default App;
 // -- -- -- // 
