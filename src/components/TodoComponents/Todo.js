@@ -4,11 +4,11 @@ import './Todo.css'
 todo data and displays the task to the screen. */}
 
 function Todo (props) {
-    console.log('WHAT THE FUCK')
+    const { myProps } = props;
     return (
         <div className='listItem'>
-            {console.log(props)}
-            <h2>hello from TODO</h2>
+            {console.log(myProps)}
+            {myProps}
         </div>
     )
 }

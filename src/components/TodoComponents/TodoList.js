@@ -16,6 +16,8 @@ function ToDoList (props) {
         console.log(propsArray)
         const propsLength = myProps.toDoDataArray.length
         console.log(propsLength)
+
+        console.log(propsArray[0])
         // -- //
 
         {/* toDoDataArray Length */}
@@ -23,8 +25,12 @@ function ToDoList (props) {
 
     return (
         <div className='toDoList'>
+            {/* MAP THE ARRAY */}
+            
+
+
             {myProps.toDoDataArray.map(item => (
-                <Todo props={propsArray}/>    
+                <Todo myProps={item}/>    
             ))}
         </div>
 
