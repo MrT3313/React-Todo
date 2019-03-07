@@ -59,7 +59,7 @@ class App extends React.Component {
         {/* displayForm */}
           <Form 
             task={this.state.task}
-            item={this.state.id}
+            id={this.state.id}
             inputChangeHandler={this.inputChangeHandler}
             clearButtonHandler={this.clearButtonHandler}
           />
