@@ -23,15 +23,28 @@ class App extends React.Component {
       ],
       task: '',
       id: undefined,
-      completed: false
+      completed: false,
     }
+    this.addButtonHandler = this.addButtonHandler.bind(this)
   }
 
+  inputChangeHandler = event => {
+    console.log(event.target.name)
+    console.log(event.target.value)
 
-  addButtonHandler() {
-
+    this.setState({[event.target.name]: event.target.value})
   }
+
+  addButtonHandler = event => {
+    event.preventDefault() 
+    
+  }
+
   clearButtonHandler() {
+
+  }
+
+  toggleItem() {
 
   }
 
@@ -39,9 +52,17 @@ class App extends React.Component {
     return (
       <div className='container-app'>
         {/* pass STATE as PROPS into ToDoList  */}
-          <ToDoList myProps={this.state}/>
+          <ToDoList 
+            dataArray={this.state.toDoDataArray}
+            toggleItem={this.toggleItem}
+          />
         {/* displayForm */}
-          <Form />
+          <Form 
+            task={this.state.task}
+            item={this.state.id}
+            inputChangeHandler={this.inputChangeHandler}
+            clearButtonHandler={this.clearButtonHandler}
+          />
       </div>
     );
   }

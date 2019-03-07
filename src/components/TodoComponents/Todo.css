@@ -9,6 +9,6 @@
 }
 
 .toDoList {
-    min-height: 100px;
+    /* min-height: 100px; */
     border: 1px solid black;
 }
