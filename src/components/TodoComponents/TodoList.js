@@ -9,12 +9,14 @@ import Todo from './Todo'
 // functional component
 
 function ToDoList (props) {
-        const { dataArray } = props;
+        // const { dataArray } = props;
     return (
         <div className='toDoList'>
-            {dataArray.map(item => (
-                <Todo myProps={item}/>    
-            ))}
+            {/* {dataArray.map(item => (
+                    <Todo myProps={item}/>    
+                
+                
+            ))} */}
         </div>
     )
 }
