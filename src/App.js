@@ -45,6 +45,7 @@ class App extends React.Component {
 
 // -- addTodo -- //
   addTodo() {
+    
     console.log('hello from inside addTodo')
   }
 
@@ -58,6 +59,7 @@ class App extends React.Component {
   }
 // -- clearCompleted -- //
   clearCompleted() {
+    
     console.log('hello from inside clearCompleted')
   }
 

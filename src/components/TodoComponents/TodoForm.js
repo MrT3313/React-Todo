@@ -7,10 +7,22 @@ function ToDoForm (props) {
         <form className='toDoForm'>
             <input
                 placeholder = 'words go here'
+                onChange={props.toggleTodo}
+            ></input>
+            <button 
+                name='addBtn' 
+                type='submit'
+                onClick={props.addTodo}
             >
-            
-            
-            </input>
+                Add Todo
+            </button>
+            <button 
+                name='clrBtn'
+                type='submit'
+                onClick={props.clearCompleted}
+            >
+                Clear Completed
+            </button>
             
             {/* <input 
                 type="text" 

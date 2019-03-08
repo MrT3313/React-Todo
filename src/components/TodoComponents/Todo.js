@@ -7,8 +7,7 @@ function Todo (props) {
     // const { myProps } = props;
     return (
         <div className='listItem'>
-            {/* {console.log(myProps)}
-            {myProps} */}
+            {props.item.value} 
         </div>
     )
 }
