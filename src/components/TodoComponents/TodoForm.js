@@ -4,14 +4,16 @@ import React from 'react';
 function ToDoForm (props) {
     // console.log(props)
     return (
-        <form className='toDoForm'>
+        <form 
+            className='toDoForm'
+            onSubmit={props.addTodo}
+        >
             <input
                 type='text'
                 placeholder = 'words go here'
                 onChange={props.changeHandler}
+                name='task'
 
-                // HOW DO I GET THE VALUE OF THE INPUT FIELD
-                // value={this.item.value}
             ></input>
             <button 
                 name='addBtn' 

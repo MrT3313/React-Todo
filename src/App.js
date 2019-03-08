@@ -26,8 +26,6 @@ const staticDebugArray = [
   }
   
 ]
-
-
 // // -- CLASS COMPONENT -- //
 class App extends React.Component {
 //   // you will need a place to store your state in this component.
@@ -42,9 +40,23 @@ class App extends React.Component {
   }
 
 // -- METHODS -- //
-
 // -- addTodo -- //
-  addTodo() {
+  addTodo = event => {
+    event.preventDefault() 
+
+    // CREATE NEW toDo ITEM
+    this.setState( prevState => {
+      return {
+        dataArray: [...prevState.dataArray, {
+          value: prevState.task,
+          id: Date.now()
+          }
+        ]
+      }
+    })
+
+
+
     console.log('hello from inside addTodo')
   }
 
@@ -58,8 +70,8 @@ class App extends React.Component {
     this.setState({ [event.target.name]: event.target.value })
   }
 // -- clearCompleted -- //
-  clearCompleted() {
-    
+  clearCompleted = event => {
+    event.preventDefault() 
     console.log('hello from inside clearCompleted')
   }
 
@@ -73,8 +85,8 @@ class App extends React.Component {
           // from STATE
             newTask={this.state.task}
           // METHODS
+            changeHandler={this.changeHandler}  
             addTodo={this.addTodo}
-            changeHandler={this.changeHandler}
             clearCompleted={this.clearCompleted}
 
         />
