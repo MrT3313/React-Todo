@@ -45,7 +45,6 @@ class App extends React.Component {
 
 // -- addTodo -- //
   addTodo() {
-    
     console.log('hello from inside addTodo')
   }
 
@@ -54,8 +53,9 @@ class App extends React.Component {
     console.log('hello from inside toggleTodo')
   }
 // -- changeHandler -- //
-  changeHandler() {
+  changeHandler = event => {
     console.log('hello from inside changeHandler')
+    this.setState({ [event.target.name]: event.target.value })
   }
 // -- clearCompleted -- //
   clearCompleted() {

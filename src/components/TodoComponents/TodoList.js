@@ -17,6 +17,7 @@ function ToDoList (props) {
 
             {props.dataArray.map(item => (
                     <Todo 
+                        key={item.id}    
                         item={item}
                         toggleTodo={props.toggleTodo}
                     />    

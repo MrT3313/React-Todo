@@ -6,8 +6,12 @@ function ToDoForm (props) {
     return (
         <form className='toDoForm'>
             <input
+                type='text'
                 placeholder = 'words go here'
-                onChange={props.toggleTodo}
+                onChange={props.changeHandler}
+
+                // HOW DO I GET THE VALUE OF THE INPUT FIELD
+                // value={this.item.value}
             ></input>
             <button 
                 name='addBtn' 
