@@ -3,7 +3,7 @@
   import './components/TodoComponents/Todo.css'
   //--//
   import ToDoList from './components/TodoComponents/TodoList'
-  import Form from './components/TodoComponents/TodoForm'
+  import ToDoForm from './components/TodoComponents/TodoForm'
 
 // -- -- -- //  
 
@@ -29,50 +29,41 @@ const staticDebugArray = [
 
 
 // // -- CLASS COMPONENT -- //
-// class App extends React.Component {
+class App extends React.Component {
 //   // you will need a place to store your state in this component.
 //   // design `App` to be the parent component of your application.
 //   // this component is going to take care of state, and any change handlers you need to work with your state
-//   constructor() {
-//     super()
-//     this.state = {
-//       toDoDataArray: staticDebugArray,
-//       task: '',
-//       id: undefined,
-//       completed: false,
-//     }
-//   }
+  constructor() {
+    super()
+    this.state = {  
+      toDoDataArray: staticDebugArray,
+      task: '',
+      }
+  }
 
-//   // -- METHODS -- //
-//   // -- -- -- -- // 
+// -- METHODS -- //
 
+// -- addTodo -- //
+// -- toggleTodo -- //
+// -- changeHandler -- //
+// -- clearCompleted -- //
 
 
 //   // -- RENDER -- //
 //   // -- -- -- -- // 
-//   render() {
-//     return (
-//       <div className='container-app'>
-//         {/* pass STATE as PROPS into ToDoList  */}
-//           <ToDoList 
-//             dataArray={this.state.toDoDataArray}
-//             // toggleItem={this.toggleItem}
-//           />
-//         {/* displayForm */}
-//           <Form 
-//             task={this.state.task}
-//             id={this.state.id}
-//             inputChangeHandler={this.inputChangeHandler}
-//             clearButtonHandler={this.clearButtonHandler}
-//           />
-//       </div>
-//     );
-//   }
+  render() {
+    return (
+      <div className='container-app'>          
+        <ToDoForm />
+        {/* <ToDoList /> */}
+      </div>
+    );
+  }
 
 
 //   // ADD HANDLERs for BOTH buttons INSIDE the <App />
 
-// }
+}
 export default App;
  
 
