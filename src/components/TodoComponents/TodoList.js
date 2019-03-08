@@ -16,9 +16,10 @@ function ToDoList (props) {
 
 
             {props.dataArray.map(item => (
-                    <Todo item={item}/>    
-                
-                
+                    <Todo 
+                        item={item}
+                        toggleTodo={props.toggleTodo}
+                    />    
             ))}
         </div>
     )
