@@ -36,17 +36,30 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {  
-      toDoDataArray: staticDebugArray,
-      task: '',
+      dataArray: staticDebugArray, // passed to TodoList
+      task: '', // passed to TodoForm
       }
   }
 
 // -- METHODS -- //
 
 // -- addTodo -- //
+  addTodo() {
+    console.log('hello from inside addTodo')
+  }
+
 // -- toggleTodo -- //
+  toggleTodo() {
+    console.log('hello from inside toggleTodo')
+  }
 // -- changeHandler -- //
+  changeHandler() {
+    console.log('hello from inside changeHandler')
+  }
 // -- clearCompleted -- //
+  clearCompleted() {
+    console.log('hello from inside clearCompleted')
+  }
 
 
 //   // -- RENDER -- //
@@ -54,8 +67,21 @@ class App extends React.Component {
   render() {
     return (
       <div className='container-app'>          
-        <ToDoForm />
-        {/* <ToDoList /> */}
+        <ToDoForm 
+          // from STATE
+            newTask={this.state.task}
+          // METHODS
+            addTodo={this.addTodo}
+            changeHandler={this.changeHandler}
+            clearCompleted={this.clearCompleted}
+
+        />
+        <ToDoList 
+          // from STATE
+            dataArray={this.state.dataArray}
+          // METHODS
+            toggleTodo={this.toggleTodo}
+        />
       </div>
     );
   }
