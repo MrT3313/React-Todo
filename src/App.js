@@ -51,7 +51,7 @@ class App extends React.Component {
           value: prevState.task,
           id: Date.now()
           }
-        ]
+        ], task: ''
       }
     })
 
