@@ -13,7 +13,7 @@ function ToDoForm (props) {
                 placeholder = 'words go here'
                 onChange={props.changeHandler}
                 name='task'
-
+value={props.newTask}
             ></input>
             <button 
                 name='addBtn' 
