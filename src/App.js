@@ -47,9 +47,24 @@ class App extends React.Component {
   addToDo = (new_ToDo) => {
     // e.preventDefault()
     console.log('new_ToDo', new_ToDo)
+    console.log(this.state)
     // -*- //
+    if (this.state.dataArray.length === 0) {
+      console.log('length = 0')
+        this.setState({
+          dataArray: [new_ToDo]
+        });
+    } else {
+      this.setState(prevState => ({
+        dataArray: [...prevState.dataArray, new_ToDo]
+      }));
+    }
+
 
   }
+
+
+
 
   render() {
     return (

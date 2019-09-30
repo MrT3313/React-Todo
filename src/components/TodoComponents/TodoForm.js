@@ -53,6 +53,11 @@ class ToDoList extends Component {
         console.log('inside submit')
         // -- * -- //
         this.props.addToDo(this.state)
+        // -- * -- //
+        this.setState({
+            title: '',
+            description: '',
+        })
     }
 
 
@@ -61,6 +66,7 @@ class ToDoList extends Component {
         // -- * -- //
         return (
             <ToDo_Form_Container>
+                
                 <Inputs_Container
                     onSubmit={this.submit}
                 >
