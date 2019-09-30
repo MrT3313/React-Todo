@@ -56,13 +56,18 @@ class ToDoList extends Component {
         e.preventDefault()
         console.log('inside submit')
         // -- * -- //
-        this.props.addToDo(this.state)
-        // -- * -- //
-        this.setState({
-            title: '',
-            description: '',
-            category: '',
-        })
+        if (this.state.category === '') {
+            alert('Please Choose A Category')
+        } else {
+            // -- * -- //
+            this.props.addToDo(this.state)
+            // -- * -- //
+            this.setState({
+                title: '',
+                description: '',
+                category: '',
+            })
+        }
     }
 
 
@@ -86,7 +91,7 @@ class ToDoList extends Component {
                         onChange={this.inputChangeHandler}
                         name='category'
                     >
-                        <option name='category' value="Random">Random</option>
+                        <option name='category' value="-">Please Pick A Category</option>
                         <option name='category' value="School">School</option>
                         <option name='category' value="Family">Family</option>
                         <option name='category' value="Work">Work</option>

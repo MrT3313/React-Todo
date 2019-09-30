@@ -18,6 +18,7 @@ class ToDo extends Component {
         return (
             <ToDo_container>
                 <h2>Title: {this.props.item.title}</h2>
+                <h4>Category: {this.props.item.category}</h4>
                 <h4>Description: {this.props.item.description}</h4>
             </ToDo_container>
         )
