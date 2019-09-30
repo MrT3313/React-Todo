@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 // -*- Components -*- //
 import To_Do_List from './components/TodoComponents/TodoList.js'
+import To_Do_Form from './components/TodoComponents/TodoForm.js'
 
 
 // -*- Debug Key -*- //
@@ -36,16 +37,26 @@ class App extends React.Component {
     }
   }
 
+  // -*- Methods -*- //
   componentDidMount() {
     console.log('-*- component did mount -*-')
     console.log('-x- this.state -x-', this.state)
     // -- * -- //
   }
-  
+
+  addToDo = (new_ToDo) => {
+    // e.preventDefault()
+    console.log('new_ToDo', new_ToDo)
+    // -*- //
+
+  }
+
   render() {
     return (
       <App_container>
         <h2>THIS TODO APP IS EPIC</h2>
+        {/* // -- -- //  */}
+        <To_Do_Form addToDo={this.addToDo}/>
         <To_Do_List appState={this.state}/>
       </App_container>
     );
