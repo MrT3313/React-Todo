@@ -6,29 +6,31 @@ import React, {Component} from 'react'
 import styled from 'styled-components'
 
 // -*- Components -*- //
+import ToDo from './Todo.js'
 
 // -*- Styled Components -*- //
 const ToDoList_container = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
     margin: 10px;
 
     min-height: 50px;
     border: 1px solid red
 `;
 
-
-
 class ToDoList extends Component {
-    constructor() {
-        super()
-        
-    }
 
     render() {
+        console.log('-*- <ToDoList /> props -*- ',this.props.appState)
+        // -- * -- //
         return (
             <>
                 <ToDoList_container>
-
+                    {this.props.appState.dataArray.map((item, key) => {
+                        return <ToDo item={item} key={key}/>
+                    })}
                 </ToDoList_container>
             </>
         )

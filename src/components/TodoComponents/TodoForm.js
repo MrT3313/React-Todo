@@ -40,10 +40,14 @@ class ToDoList extends Component {
     state = {
         title: '',
         description: '',
+        completed: false,
+        category: '',
     }
 
     inputChangeHandler = e => {
         console.log('inside change handler')
+        console.log(e.target.name)
+        console.log(e.target.value)
         // -- * -- //
         this.setState({ [e.target.name]: e.target.value })
     }
@@ -57,6 +61,7 @@ class ToDoList extends Component {
         this.setState({
             title: '',
             description: '',
+            category: '',
         })
     }
 
@@ -77,6 +82,22 @@ class ToDoList extends Component {
                         onChange={this.inputChangeHandler}
                         value={this.state.title}
                     ></input>
+                    <select
+                        onChange={this.inputChangeHandler}
+                        name='category'
+                    >
+                        <option name='category' value="Random">Random</option>
+                        <option name='category' value="School">School</option>
+                        <option name='category' value="Family">Family</option>
+                        <option name='category' value="Work">Work</option>
+                    </select>
+                    {/* <input
+                        type='text'
+                        name='category'
+                        placeholder='Category Name'
+                        onChange={this.inputChangeHandler}
+                        value={this.state.title}
+                    ></input> */}
                     <textarea
                         type='text'
                         name='description'
